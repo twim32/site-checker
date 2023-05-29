@@ -30,10 +30,7 @@ def insert(url:str, status_code:int, time_exec:str):
     sql.commit()
 
 if __name__ == "__main__":
-    db_name = 'database.sqlite'
-    url = 'https://sezoncentr.ru/'
-    time_wait = 5
-    parser = argparse.ArgumentParser(prog="SiteAvability", description="Description", epilog="text at the bottom of file")
+    parser = argparse.ArgumentParser(prog="Site checker", description="Description", epilog="text at the bottom of file")
     parser.add_argument('--url', help="URL", type=str)
     parser.add_argument('--sleep', help="Wait time between requests", type=int, default=60)
     parser.add_argument('--database', help="SQLite database file", type=str, default='database.sqlite')
